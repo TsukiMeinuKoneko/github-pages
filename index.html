@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Verde & Roxa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(90deg, #4CAF50, #800080);
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav button:hover {
+            background-color: #800080;
+        }
+        section {
+            padding: 50px;
+            display: none;
+        }
+        #inicio { display: block; }
+    </style>
+</head>
+<body>
+    <header>
+        Loja Verde & Roxa
+    </header>
+    <nav>
+        <button onclick="mostrarSecao('inicio')">Início</button>
+        <button onclick="mostrarSecao('produtos')">Produtos</button>
+        <button onclick="mostrarSecao('carrinho')">Carrinho</button>
+    </nav>
+    
+    <section id="inicio">
+        <h1>Bem-vindo à nossa loja!</h1>
+        <p>Confira nossos produtos incríveis.</p>
+    </section>
+    
+    <section id="produtos">
+        <h1>Nossos Produtos</h1>
+        <p>Aqui estão alguns de nossos melhores produtos.</p>
+    </section>
+    
+    <section id="carrinho">
+        <h1>Seu Carrinho</h1>
+        <p>Veja os itens que você adicionou ao carrinho.</p>
+    </section>
+    
+    <script>
+        function mostrarSecao(secaoId) {
+            document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(secaoId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
